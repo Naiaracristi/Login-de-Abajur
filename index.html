@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login do abajur</title>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="abajur">
+      <div class="cupula"></div>
+      <div class="haste"></div>
+      <div class="base"></div>
+
+      <button class="pendulo" id="pendulo" aria-label="Acender ou apagar a luz">
+        <span class="fio"></span>
+        <span class="bola"></span>
+      </button>
+    </div>
+    <form class="login" id="login">
+      <h1>Login</h1>
+      <input type="email" placeholder="E-mail" required />
+      <input type="password" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <div class="vagalumes">
+      <span
+        class="vagalume"
+        style="--x: 10%; --y: 70%; --t: 7s; --d: 0s"
+      ></span>
+      <span
+        class="vagalume"
+        style="--x: 25%; --y: 40%; --t: 9s; --d: 1s"
+      ></span>
+      <span
+        class="vagalume"
+        style="--x: 40%; --y: 80%; --t: 8s; --d: 2s"
+      ></span>
+      <span
+        class="vagalume"
+        style="--x: 60%; --y: 30%; --t: 10s; --d: 0.5s"
+      ></span>
+      <span
+        class="vagalume"
+        style="--x: 75%; --y: 65%; --t: 7.5s; --d: 1.5s"
+      ></span>
+      <span
+        class="vagalume"
+        style="--x: 90%; --y: 45%; --t: 9.5s; --d: 3s"
+      ></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

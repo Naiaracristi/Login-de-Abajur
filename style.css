@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a2e;
+  transition: background 0.4s ease;
+  gap: 60px;
+}
+body.ligada {
+  background: #f4e9d8;
+}
+
+.abajur {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cupula {
+  width: 140px;
+  height: 90px;
+  background: #d9a441;
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+  transition: background 0.4s ease;
+}
+body.ligada .cupula {
+  background: #ffd666;
+  filter: drop-shadow(0 0 25px rgba(255, 214, 102, 0.9));
+}
+body.ligada {
+  background: #3a2f4a;
+}
+
+.haste {
+  width: 8px;
+  height: 150px;
+  background: #555;
+}
+
+.base {
+  width: 100px;
+  height: 14px;
+  background: #333;
+  border-radius: 6px 6px 0 0;
+}
+
+.pendulo {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fio {
+  width: 2px;
+  height: 30px;
+  background: #888;
+  transition: height 0.15s ease-out;
+}
+
+.bola {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #888;
+  margin-top: -1px;
+}
+
+.pendulo.puxando .fio {
+  height: 55px;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opaciity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0.4s;
+}
+body.ligada .login {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.login h1 {
+  margin: 0;
+  color: wheat;
+}
+.login input,
+.login button {
+  padding: 10px;
+  font-size: 1rem;
+}
+.vagalumes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+body.ligada .vagalumes {
+  opacity: 1;
+}
+.vagalume {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff59d;
+  box-shadow: 0 0 10px 4px rgba(255, 235, 59, 0.8);
+  animation:
+    flutuar var(--t) ease-in-out infinite,
+    piscar 2s ease-in-out infinite;
+  animation-delay: var(--d);
+}
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, -40px);
+  }
+  50% {
+    transform: translate(-20px, -70px);
+  }
+  75% {
+    transform: translate(-40px, -30px);
+  }
+}
+@keyframes piscar {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
