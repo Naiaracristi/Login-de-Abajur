@@ -152,3 +152,34 @@ body.ligada .vagalumes {
     opacity: 1;
   }
 }
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .abajur {
+    width: 70%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .fio {
+    height: 60px;
+    width: 2px;
+  }
+  .bola {
+    width: 14px;
+    height: 14px;
+  }
+  .pendulo {
+    right: 10%;
+  }
+  .login {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+  }
+  .login input,
+  .login buttom {
+    width: 100%;
+    font-size: 16px;
+  }
+}
